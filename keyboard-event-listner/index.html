@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Made Easy</title>
+</head>
+
+<body>
+    <h1>Keyboard event listner page</h1>
+    <div>Press 'l' for light mode</div>
+    <div>Press 'd' for dark mode</div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis quis placeat alias ducimus eum quo sint quod!
+        Consequatur autem aliquid doloremque, incidunt, fuga ipsam, veritatis vel excepturi harum odio adipisci.
+    </p>
+</body>
+
+<script>
+    document.addEventListener('keydown', function (event) {
+        let bodyElement = document.getElementsByTagName('body')[0];
+        if (event.key === 'd') {
+            bodyElement.style.backgroundColor = '#222831';
+            bodyElement.style.color = '#dfa612';
+        } else if (event.key === 'l') {
+            bodyElement.style.backgroundColor = 'unset';
+            bodyElement.style.color = 'unset';
+        }
+    });
+</script>
+
+</html>
